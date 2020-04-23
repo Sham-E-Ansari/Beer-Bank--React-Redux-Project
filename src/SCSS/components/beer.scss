@@ -1,0 +1,13 @@
+.beer {
+	display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 500px;
+    padding: 15px;
+
+    &__image {
+    	max-height: 500px;
+    	margin: 20px 0;
+    }
+}
