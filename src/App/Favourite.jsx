@@ -9,7 +9,7 @@ class Favourite extends React.Component {
    constructor(props) {
       super(props);
       
-      document.title = 'Favourite | React Redux REST API Boilerplate';
+      document.title = 'Favourite | The Beer Bank!!!';
 
       this.state = {
          beer: {}
@@ -36,7 +36,6 @@ class Favourite extends React.Component {
       return (
          <div className="page">
             <Header/>
-            <h1>Favourite</h1>
            <Beer details={beer}/>
          </div>
       );

@@ -10,10 +10,11 @@ const requestOptions = {
 };
 
 function getBeers() {
-   return fetch(`${apiRoot}/beers/random`, requestOptions)
+   return fetch(`${apiRoot}/beers/`, requestOptions)
       .then(handleGetResposne)
       .then(res => {
          return res;
+         console.log(res);
    });
 }
 

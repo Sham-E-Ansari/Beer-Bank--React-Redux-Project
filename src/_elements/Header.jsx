@@ -9,9 +9,20 @@ class Header extends React.Component {
    render() {
 
       return (
+         
          <header>
-            <NavLink exact={true} to="/">HOME</NavLink>
-            <NavLink exact={true} to="/favourite">FAVOURITE</NavLink>
+            <div class="logo">
+               <p class="transB">B</p>
+               <p>B</p>
+            </div>
+            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/favourite">FAVOURITE</NavLink>
+            <h2>The Beer Bank</h2>
+            <p>YOUR FAVOURITE BEER PROVIDER !</p>
+            <form>
+             <input type="text" placeholder="Search for beer name" name="search" id="searchBar"/>
+            </form>
+
          </header>
       );
    }

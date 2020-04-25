@@ -7,7 +7,6 @@ class Beer extends React.Component {
 
    render() {
       const beer = this.props.details;
-
       return (
          <div className="beer">
             {beer &&

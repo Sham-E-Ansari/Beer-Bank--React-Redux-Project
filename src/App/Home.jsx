@@ -32,12 +32,10 @@ class Home extends React.Component {
 
    render() {
       const { beer } = this.state;
-
       return (
          <div className="page">
             <Header/>
-            <h1>The Beer Bank</h1>
-           <Beer details={beer}/>
+            <Beer details={beer}/>
          </div>
       );
    }
