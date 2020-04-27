@@ -2,7 +2,7 @@ import config from 'config';
 const apiRoot = 'https://api.punkapi.com/v2';
 
 export const beerService = {
-   getBeers
+   getBeers,getAllBeers
 };
 
 const requestOptions = {
@@ -10,11 +10,17 @@ const requestOptions = {
 };
 
 function getBeers() {
+   return fetch(`${apiRoot}/beers/random`, requestOptions)
+      .then(handleGetResposne)
+      .then(res => {
+        return res;
+   });
+}
+function getAllBeers() {
    return fetch(`${apiRoot}/beers/`, requestOptions)
       .then(handleGetResposne)
       .then(res => {
-         return res;
-         console.log(res);
+        return res;
    });
 }
 

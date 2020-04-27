@@ -11,8 +11,8 @@ class Header extends React.Component {
       return (
          
          <header>
-            <div class="logo">
-               <p class="transB">B</p>
+            <div className="logo">
+               <p className="transB">B</p>
                <p>B</p>
             </div>
             <NavLink to="/">HOME</NavLink>
