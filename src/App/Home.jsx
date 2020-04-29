@@ -10,9 +10,8 @@ class Home extends React.Component {
       super(props);
       
       document.title = 'Home | The Beer Bank!!!';
-
       this.state = {
-         beer: {}
+         beer: {},
       }
    };
 
@@ -21,26 +20,21 @@ class Home extends React.Component {
       beerService.getAllBeers()
       .then(beers => {
          dispatch(beerActions.getAllBeers(beers));
-         console.log(beers);
+         
       });
-      
    }
    componentWillReceiveProps(newProps){
       this.setState({['beer']: newProps.beer});
-   }
-
+   } 
    render() {
       const { beer } = this.state;
-
       return (
          <div className="page">
             <Header/>
+            <h1>All Beers</h1>
+            {this.state.showPopup ?<Popup text='Close Me'></Popup> : null}
             <div className="container">
-            	{Object.keys(this.props.beers).length > 1 ? this.props.beers.map(br => <Beer details={br}></Beer>) : ""}
-            	
-               <Beer details={beer}/>
-               <Beer details={beer}/>
-               <Beer details={beer}/>
+            	{this.props.beers.map(br => <Beer details={br}></Beer> )}
             </div>
          </div>
       );
@@ -55,9 +49,8 @@ function mapStateToProps(state) {
 }
 */
 const mapStateToProps = (state) => {
-   // const {beer} = state;
    return {
-      beers: state.beer
+      beers: state.beer.beers
    }
 }
 const connectedHome = connect(mapStateToProps)(Home);

@@ -17,7 +17,7 @@ function getBeers() {
    });
 }
 function getAllBeers() {
-   return fetch(`${apiRoot}/beers/`, requestOptions)
+   return fetch(`${apiRoot}/beers?page=1&per_page=80`, requestOptions)
       .then(handleGetResposne)
       .then(res => {
         return res;

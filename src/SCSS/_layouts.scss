@@ -16,6 +16,7 @@ header{
   	background-color: red;
   	background-image: linear-gradient(to bottom right, black, indigo); 
   	padding: 20px 10px;
+  	margin-bottom: 10px;
 }
 header a {
   	float: right;
@@ -64,4 +65,9 @@ header p{
   margin-right: auto;
   margin-top: 5px;
   width: 850px;
+}
+
+
+.favIcon{
+	float: right; 
 }

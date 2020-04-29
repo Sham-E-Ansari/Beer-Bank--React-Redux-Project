@@ -1,11 +1,17 @@
 export function beer(state = {}, action) {
   switch (action.type) {
     case 'GET_BEERS':
-      return action.beers[0]
+      return {
+      	...state,
+        'random': action.beers[0]
+      }
       
     case 'GET_ALL_BEERS':
-      return action.beers
-      
+      return {
+      	...state,
+        'beers': action.beers
+      }
+
     default:
       return {
         ...state,

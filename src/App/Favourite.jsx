@@ -45,7 +45,7 @@ class Favourite extends React.Component {
 function mapStateToProps(state) {
    const {beer} = state;
    return {
-      beer
+      beer:beer.random
    };
 }
 
