@@ -8,7 +8,7 @@ import { beerActions, beerService } from './../_factory';
 class Favourite extends React.Component {
    constructor(props) {
       super(props);
-      
+
       document.title = 'Favourite | The Beer Bank!!!';
 
       this.state = {
@@ -16,18 +16,18 @@ class Favourite extends React.Component {
       }
    };
 
-   componentWillMount(){
+   componentWillMount() {
       const { dispatch } = this.props;
 
       beerService.getBeers()
-      .then(beers => {
-         dispatch(beerActions.getBeers(beers));
-      });
+         .then(beers => {
+            dispatch(beerActions.getBeers(beers));
+         });
    }
 
 
-   componentWillReceiveProps(newProps){
-      this.setState({['beer']: newProps.beer});
+   componentWillReceiveProps(newProps) {
+      this.setState({ ['beer']: newProps.beer });
    }
 
    render() {
@@ -35,17 +35,22 @@ class Favourite extends React.Component {
 
       return (
          <div className="page">
-            <Header/>
-           <Beer details={beer}/>
+            <Header />
+            <div className="container">
+               {
+               this.props.beers.map(br => <Beer details={br}></Beer>)
+            }
+            </div>
+            
          </div>
       );
    }
 }
 
 function mapStateToProps(state) {
-   const {beer} = state;
+   const { beer } = state;
    return {
-      beer:beer.random
+      beers: beer.fav
    };
 }
 

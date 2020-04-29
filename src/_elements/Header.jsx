@@ -12,8 +12,8 @@ class Header extends React.Component {
          
          <header>
             <div className="logo">
+               <span><p>B</p></span>
                <p className="transB">B</p>
-               <p>B</p>
             </div>
             <NavLink to="/">HOME</NavLink>
             <NavLink to="/favourite">FAVOURITE</NavLink>

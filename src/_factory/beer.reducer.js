@@ -3,7 +3,7 @@ export function beer(state = {}, action) {
     case 'GET_BEERS':
       return {
       	...state,
-        'random': action.beers[0]
+        'favbeer': action.beers[0]
       }
       
     case 'GET_ALL_BEERS':
@@ -11,11 +11,22 @@ export function beer(state = {}, action) {
       	...state,
         'beers': action.beers
       }
+    case 'ADD_FAV_BEER':
+      return {
+        ...state,
+        'fav': state.fav.concat(action.newfav)
+      }
+    case 'DEL_FAV_BEER':
+      return {
+        ...state,
+        'fav': state.fav.filter(item => item.id !== action.newfav.id)
+      }
 
     default:
       return {
         ...state,
-        'beers': []
+        'beers': [],
+        'fav': []
       }
   }
 }

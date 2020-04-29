@@ -1,16 +1,22 @@
 .beer {
-	display: inline-block;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    max-height: 300px;
-    margin: 10px;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
     border-radius: 5px;
-    float: left;
-    background-color: lightgray;
-
+    background-color: white;
+    box-shadow: 0 0 20px gray;
     &__image {
     	max-height: 150px;
     	margin: 20px 0;
     }
+    &__name {
+        font-size: 14px;
+    }
+    &__tagline {
+        font-size: 12px;
+    }
+}
+.fav{
+    text-align: right;
+    float: right;
 }

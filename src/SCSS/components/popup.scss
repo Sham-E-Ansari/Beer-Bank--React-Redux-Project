@@ -15,31 +15,70 @@
   right: 30%;  
   top: 20%;  
   bottom: 20%;  
-  margin: auto;  
+  margin: auto;
+  min-height: 500px; 
   border-radius: 2px;  
   background: white;
-  display: flex;
+  display:flex;
+
 
     &__image {
-        max-height: 300px;
-        margin: 20px 10px;
-        float:left;
-    }
-    &__details {
-        max-height: 300px;
-        margin: 20px 10px;
-        float:left;
-    }
-    &__name {
-        color: #1f0a24;
-        float:left;
-        margin-top: 20px;
-    }
-    &__tagline {
-        float:left;
-        margin-top: 10px;
-        display: block;
+        height: 280px;
+        width: 100px;
+        margin: 30px;
     }
 
 }
+.beerDescription{
+    display:flex;
+    flex:5;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #A9A9A9;
+    &__name {
+        color: #1f0a24;
+        margin-top: 30px;
+    }
+    &__tagline {
+        margin-top: 0px;
+    }
+    &__about {
+        margin-top: 20px;
+        text-align: left;
+    }
+    &__details {
+        text-align: left;
+        font-size: 10px;
+    }
+    &__serve {
+        text-align: left;
+        font-size: 12px;
+        margin-top:10px;
 
+    }
+}
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
