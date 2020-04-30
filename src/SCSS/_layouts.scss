@@ -2,12 +2,17 @@
 $roboto-condensed: 'Roboto Condensed', sans-serif;
 .page {
 	text-align: center;
-	padding: 0px 0; 
+	padding: 0px 0px; 
 }
 h2{
 	color: white;
 	margin-top: 40px;
 	margin-bottom:5px;
+}
+h1{
+	color: #7e046c;
+	margin-top: 10px;
+	margin-bottom:10px;
 }
 header{
 	overflow: hidden;
@@ -43,30 +48,27 @@ header p{
 .logo{
 	float: left;
 	margin:0px;
-	text-style:bold;
-	display:block;
+	display:flex;
 	color: white;
+	text-shadow: 2px 2px 2px white;
+	font-style: bold;
+	font-size: 25px;
 }
 .transB{
 	transform: rotate(-20deg);
 }
 .container{
   display: flex;
-  flex:3;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
   width: 1000px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  padding-top: 20px;
+  justify-content: center;
 }
 .beerlist {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   width: 850px;
-}
-.favIcon{
-	float: right; 
 }

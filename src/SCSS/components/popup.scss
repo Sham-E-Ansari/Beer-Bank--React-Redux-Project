@@ -20,24 +20,24 @@
   border-radius: 2px;  
   background: white;
   display:flex;
-
-
     &__image {
         height: 280px;
         width: 100px;
         margin: 30px;
     }
-
 }
 .beerDescription{
     display:flex;
-    flex:5;
+    flex:6;
     flex-direction: column;
     align-items: flex-start;
     color: #A9A9A9;
+    margin-right: 10px;
     &__name {
-        color: #1f0a24;
+        color: #7e046c;
         margin-top: 30px;
+        display: flex;
+        margin-right: 10px;
     }
     &__tagline {
         margin-top: 0px;
@@ -45,24 +45,36 @@
     &__about {
         margin-top: 20px;
         text-align: left;
+        font-size: 10px;
+        padding-right: 10px;
     }
     &__details {
         text-align: left;
         font-size: 10px;
+        display: flex;
+        justify-content: space-between;
     }
     &__serve {
         text-align: left;
-        font-size: 12px;
+        font-size: 10px;
         margin-top:10px;
-
+    }
+    &__servedtitle{
+        color: black;
+        margin-top:20px;
+    }
+    &__fav{
+    float: right;
+    color: black;
+    margin-left: 10px;
     }
 }
 .close {
   position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
+  right: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
   opacity: 0.3;
 }
 .close:hover {
@@ -72,7 +84,7 @@
   position: absolute;
   left: 15px;
   content: ' ';
-  height: 33px;
+  height: 20px;
   width: 2px;
   background-color: #333;
 }

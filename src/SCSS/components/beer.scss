@@ -1,13 +1,13 @@
 .beer {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin: 5px;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 20px gray;
     &__image {
     	max-height: 150px;
-    	margin: 20px 0;
+    	margin: 20px 0px 20px 20px;
     }
     &__name {
         font-size: 14px;
@@ -17,6 +17,8 @@
     }
 }
 .fav{
-    text-align: right;
     float: right;
+    color: deepblue;
+    margin-top: 5px;
+    margin-right: 5px;
 }

@@ -32,10 +32,10 @@ class Home extends React.Component {
          <div className="page">
             <Header/>
             <h1>All Beers</h1>
-            {this.state.showPopup ?<Popup text='Close Me'></Popup> : null}
-            <div className="container">
-            	{this.props.beers.map(br => <Beer details={br}></Beer> )}
-            </div>
+            {this.state.showPopup ?<Popup></Popup> : null}
+	        <div className="container">
+	            {this.props.beers.map(br => <Beer details={br}></Beer> )}
+	        </div>
          </div>
       );
    }

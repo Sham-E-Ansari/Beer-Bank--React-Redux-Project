@@ -1,8 +1,8 @@
 import React from 'react';
 import Popup from './../_elements/Popup.jsx';
 import { connect } from 'react-redux';
-import { MdRemoveCircle } from 'react-icons/md';
-import { RiAddCircleLine } from 'react-icons/ri';
+import { FaStar } from 'react-icons/fa';
+import { FiStar } from 'react-icons/fi';
 
 class Beer extends React.Component {
    constructor(props) {
@@ -37,7 +37,7 @@ class Beer extends React.Component {
          <div className="beer">
             <div className="fav">
                <p onClick={this.toggleFav.bind(this)}>
-                  { favState ? <MdRemoveCircle /> : <RiAddCircleLine /> }
+                  { favState ? <FaStar /> : <FiStar /> }
                </p>
 
             </div>
