@@ -19,9 +19,13 @@ export function beer(state = {}, action) {
     case 'DEL_FAV_BEER':
       return {
         ...state,
-        'fav': state.fav.filter(item => item.id !== action.newfav.id)
+        'fav': state.fav.filter(beer => beer.id !== action.delfav.id)
       }
-
+    case 'CLEAR_FAV_BEER':
+      return {
+        ...state,
+        'fav': []
+      }
     default:
       return {
         ...state,

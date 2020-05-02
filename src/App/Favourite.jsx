@@ -29,13 +29,12 @@ class Favourite extends React.Component {
    componentWillReceiveProps(newProps) {
       this.setState({ ['beer']: newProps.beer });
    }
-
    render() {
-      const { beer } = this.state;
-
       return (
          <div className="page">
             <Header />
+            <h3 className="favText"> Your Favourites </h3>
+            <a className="clearFav"> Clear Favourites </a>
             <div className="container">
                {
                this.props.beers.map(br => <Beer details={br}></Beer>)
@@ -53,6 +52,5 @@ function mapStateToProps(state) {
       beers: beer.fav
    };
 }
-
 const connectedFavourite = connect(mapStateToProps)(Favourite);
 export { connectedFavourite as Favourite };

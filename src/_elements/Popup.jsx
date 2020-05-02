@@ -10,7 +10,7 @@ class Popup extends React.Component{
 	};
 	toggleFav() {
       console.log(this.props.fav)
-      if (this.props.fav.some(item => item.id ==this.props.details.id))
+      if (this.props.fav.some(beer => beer.id ==this.props.details.id))
       {
          this.props.onDelFav(this.props.details)
       } 
@@ -91,7 +91,7 @@ function mapStateToProps(state) {
 const mapDispachToProps = dispatch => {
    return {
      onAddFav: (id) => dispatch({ type: "ADD_FAV_BEER", newfav: id}),
-     onDelFav: (id) => dispatch({ type: "DEL_FAV_BEER", newfav: id})
+     onDelFav: (id) => dispatch({ type: "DEL_FAV_BEER", delfav: id})
    };
  };
 export default connect(

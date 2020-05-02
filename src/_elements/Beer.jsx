@@ -11,6 +11,7 @@ class Beer extends React.Component {
          showPopup: false,
       };
       this.togglePopup = this.togglePopup.bind(this);
+      this.toggleFav = this.toggleFav.bind(this);
    };
 
    togglePopup() {  
@@ -21,7 +22,7 @@ class Beer extends React.Component {
     }
    toggleFav() {
       console.log(this.props.fav)
-      if (this.props.fav.some(item => item.id ==this.props.details.id))
+      if (this.props.fav.some(beer => beer.id ==this.props.details.id))
       {
          this.props.onDelFav(this.props.details)
       } 
@@ -32,11 +33,11 @@ class Beer extends React.Component {
    }  
    render() {
       const beer = this.props.details;
-      let favState = this.props.fav.some(item => item.id ==this.props.details.id)
+      let favState = this.props.fav.some(beer => beer.id ==this.props.details.id)
       return (
          <div className="beer">
             <div className="fav">
-               <p onClick={this.toggleFav.bind(this)}>
+               <p onClick={this.toggleFav}>
                   { favState ? <FaStar /> : <FiStar /> }
                </p>
 
@@ -47,7 +48,7 @@ class Beer extends React.Component {
                <p className="beer__tagline">{beer.tagline}</p>
             </div>
             
-            { this.state.showPopup ? <Popup details={beer} closePopup={this.togglePopup.bind(this)}></Popup>: null }
+            { this.state.showPopup ? <Popup details={beer} closePopup={this.togglePopup}></Popup>: null }
          
          </div>
          
@@ -64,7 +65,7 @@ function mapStateToProps(state) {
 const mapDispachToProps = dispatch => {
    return {
      onAddFav: (id) => dispatch({ type: "ADD_FAV_BEER", newfav: id}),
-     onDelFav: (id) => dispatch({ type: "DEL_FAV_BEER", newfav: id})
+     onDelFav: (id) => dispatch({ type: "DEL_FAV_BEER", delfav: id})
    };
  };
 export default connect(
