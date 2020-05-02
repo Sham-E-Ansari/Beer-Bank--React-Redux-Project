@@ -29,12 +29,16 @@ class Favourite extends React.Component {
    componentWillReceiveProps(newProps) {
       this.setState({ ['beer']: newProps.beer });
    }
+
+   clearFav() {
+         this.props.onClearFav(this.props);
+   }
    render() {
       return (
          <div className="page">
             <Header />
             <h3 className="favText"> Your Favourites </h3>
-            <a className="clearFav"> Clear Favourites </a>
+            <p className="clearFav" onClick={this.clearFav.bind(this)}> Clear Favourites </p>
             <div className="container">
                {
                this.props.beers.map(br => <Beer details={br}></Beer>)
@@ -52,5 +56,10 @@ function mapStateToProps(state) {
       beers: beer.fav
    };
 }
-const connectedFavourite = connect(mapStateToProps)(Favourite);
+const mapDispachToProps = dispatch => {
+   return {
+     onClearFav: (beers) => dispatch(beerActions.clearFavBeers(beers)),
+   };
+ };
+const connectedFavourite = connect(mapStateToProps , mapDispachToProps)(Favourite);
 export { connectedFavourite as Favourite };

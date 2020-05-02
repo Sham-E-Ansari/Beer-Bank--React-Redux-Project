@@ -21,7 +21,7 @@ class Popup extends React.Component{
    }  
 	render(){
 		const beer = this.props.details;
-		let favState = this.props.fav.some(item => item.id ==this.props.details.id)
+		let favState = this.props.fav.some(beer => beer.id ==this.props.details.id)
 		return(
 			<div className='popup'>
 				<div className='popupInner'>
